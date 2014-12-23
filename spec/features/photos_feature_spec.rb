@@ -10,6 +10,18 @@ feature 'photos' do
 		end
 	end
 
+	context 'adding photos' do
+		scenario 'prompts user to add img url and coomment, then displays it' do
+			visit '/photos'
+			click_link 'Add photo'
+			# fill_in 'Photo', with: 'img_url'
+			attach_file('img_url', '../helpers/upload_photo.jpg')
+			click_button 'Add'
+			expect(page).to have_content('img_url')
+			expect(current_path).to eq '/photos'
+		end
+	end
+
 	context 'photos have been added' do
 		before do
 			Photo.create(picture: 'img_url')
