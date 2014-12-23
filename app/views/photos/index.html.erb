@@ -1,3 +1,8 @@
-'No photos'
-
-<a href='#'>Add photo</a>
+<% if @photos.any? %>
+	<% @photos.each do |photo| %>
+		<%= photo.picture %>
+	<% end %>
+<% else %>
+	<h1>No photos</h1>
+	<a href='#'>Add photo</a>
+<% end %>
