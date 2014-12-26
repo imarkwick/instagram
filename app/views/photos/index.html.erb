@@ -1,8 +1,10 @@
-<% if @photos.any? %>
-	<% @photos.each do |photo| %>
-		<%= photo.picture %>
+<section class="photos">
+	<% if @photos.any? %>
+		<% @photos.each do |photo| %>
+			<%= image_tag(photo.picture) %>
+		<% end %>
+	<% else %>
+		<h1>No photos</h1>
 	<% end %>
-<% else %>
-	<h1>No photos</h1>
-<% end %>
+</section>
 	<a href='<%= new_photo_path %>'>Add photo</a>
