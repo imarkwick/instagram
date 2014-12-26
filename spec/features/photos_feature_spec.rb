@@ -18,23 +18,33 @@ feature 'photos' do
 
 		scenario 'displays photos' do
 			visit '/photos'
-			expect(page).to have_content('img_url')
+			expect(page).to have_content('Add photo')
+			# expect(page).to have_content('img_url')
 			expect(page).not_to have_content('No photos')
 		end
 	end
-end
-
-describe 'CRUD' do
 
 	context 'adding photos' do
-		scenario 'prompts user to add img url and coomment, then displays it' do
+		scenario 'prompts user to add img url and comment, then displays it' do
 			visit '/photos'
 			click_link 'Add photo'
 			fill_in 'Picture', with: 'img_url'
-			# attach_file('img_url', '../helpers/upload_photo.jpg')
 			click_button 'Create Photo'
-			expect(page).to have_content('img_url')
+			expect(page).to have_content('Add photo')
+			# expect(page).to have_content('img_url')
 			expect(current_path).to eq '/photos'
+		end
+	end
+
+	context 'viewing photos' do
+
+		let!(:pic){Photo.create(picture: 'img_url')}
+
+		scenario 'lets a user view a photo' do
+			visit '/photos'
+			click_link 'pic'
+			expect(page).to have_content 'img_url'
+			expect(current_path).to eq "/photos/#{pic.id}"
 		end
 	end
 end
