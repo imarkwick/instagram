@@ -30,6 +30,8 @@ gem 'paperclip'
 
 gem 'aws-sdk'
 
+gem 'pg'
+
 group :test do 
 	gem 'rspec-rails'
 	gem 'capybara'
