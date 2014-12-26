@@ -1,6 +1,17 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV["INSTAGRAM_BUCKET"],
+      :access_key_id => ENV["INSTAGRAM_KEY"],
+      :secret_access_key => ENV["INSTAGRAM_SECRET"]
+    }
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
