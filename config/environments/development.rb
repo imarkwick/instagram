@@ -2,8 +2,8 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.paperclip_defaults = {
     :storage => :s3,
+    :bucket => ENV["INSTAGRAM_BUCKET"],
     :s3_credentials => {
-      :bucket => ENV["INSTAGRAM_BUCKET"],
       :access_key_id => ENV["INSTAGRAM_KEY"],
       :secret_access_key => ENV["INSTAGRAM_SECRET"]
     }
