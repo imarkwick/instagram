@@ -2,7 +2,7 @@
 <section class="photos">
 	<% if @photos.any? %>
 		<% @photos.each do |photo| %>
-			<%= link_to (image_tag(photo.picture)), photo_path(photo) %>
+			<%= link_to(image_tag(photo.picture.url(:thumb)), photos_path(photo)) %>
 		<% end %>
 	<% else %>
 		<h1>No photos</h1>

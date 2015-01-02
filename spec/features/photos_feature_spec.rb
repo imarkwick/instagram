@@ -29,9 +29,10 @@ feature 'photos' do
 			visit '/photos'
 			click_link 'Add photo'
 			fill_in 'Picture', with: 'img_url'
+			# attach_file 'Photo', Rails.root.join('img_url.jpg')
 			click_button 'Create Photo'
 			expect(page).to have_content('Add photo')
-			# expect(page).to have_content('img_url')
+			# expect(page).to have_css 'img.img_url'
 			expect(current_path).to eq '/photos'
 		end
 	end

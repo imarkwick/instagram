@@ -10,7 +10,7 @@ Rails.application.configure do
       :access_key_id => ENV["INSTAGRAM_KEY"],
       :secret_access_key => ENV["INSTAGRAM_SECRET"]
     }
-    :s3_host_name => 's3-eu-west-1.amazonaws.com'
+    # :s3_host_name => 's3-eu-west-1.amazonaws.com'
   }
 
   # Code is not reloaded between requests.
