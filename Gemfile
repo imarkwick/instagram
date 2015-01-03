@@ -32,7 +32,9 @@ gem 'pg'
 
 # gem 'paperclip'
 
-gem 'paperclip',		github: 'thoughtbot/paperclip'
+gem 'paperclip'
+
+gem 'paperclip-rack', require: 'paperclip/rack'
 
 group :test do 
 	gem 'rspec-rails'

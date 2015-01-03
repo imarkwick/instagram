@@ -1,5 +1,5 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * This is a manifest file that'l be compiled into application.css, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
@@ -13,3 +13,22 @@
  *= require_tree .
  *= require_self
  */
+
+#photo_picture {
+ 	padding: 10px;
+ 	margin-left: 20px;
+}
+
+.new_photo {
+	padding: 20px;
+}
+
+#add_photo {
+	margin-left: 20px;
+	padding: 6px;
+	border: solid blue 1px;
+}
+
+.photos {
+	padding: 20px;
+}
