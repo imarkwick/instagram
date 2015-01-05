@@ -11,14 +11,14 @@ feature 'photos' do
 
 
 	context 'photos have been added' do
-		
+
 		before do
-			Photo.create(comment: 'Test comment')
+			Photo.create(picture: 'test_img.jpg')
 		end
 
 		scenario 'displays photos' do
 			visit '/photos'
-			expect(page).to have_content('Add photo')
+			expect(page).to have_css("img[src*='test_img.jpg']")
 			expect(page).not_to have_content('No photos')
 		end
 	end
@@ -27,10 +27,10 @@ feature 'photos' do
 		scenario 'prompts user to add img url and comment, then displays it' do
 			visit '/photos'
 			click_link 'Add photo'
-			fill_in 'Comment', with: 'Test comment'
+			attach_file('photo[picture]', 'spec/features/test_img.jpg')
 			click_button 'Create Photo'
 			expect(current_path).to eq '/photos'
-			# expect(page).to have_content 'Test comment'
+			expect(page).to have_css("img[src*='test_img.jpg']")
 		end
 	end
 
