@@ -1,4 +1,7 @@
 require 'rails_helper'
+require_relative 'helpers/application'
+
+include ApplicationHelper
 
 feature 'photos' do 
 
@@ -12,11 +15,8 @@ feature 'photos' do
 
 	context 'photos have been added' do
 
-		before do
-			Photo.create(picture: 'test_img.jpg')
-		end
-
 		scenario 'displays photos' do
+			create_photo
 			visit '/photos'
 			expect(page).to have_css("img[src*='test_img.jpg']")
 			expect(page).not_to have_content('No photos')
@@ -25,10 +25,7 @@ feature 'photos' do
 
 	context 'adding photos' do
 		scenario 'prompts user to add img url and comment, then displays it' do
-			visit '/photos'
-			click_link 'Add photo'
-			attach_file('photo[picture]', 'spec/features/test_img.jpg')
-			click_button 'Create Photo'
+			create_photo
 			expect(current_path).to eq '/photos'
 			expect(page).to have_css("img[src*='test_img.jpg']")
 		end
