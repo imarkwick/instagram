@@ -13,7 +13,7 @@ feature 'photos' do
 	context 'photos have been added' do
 		
 		before do
-			Photo.create
+			Photo.create(comment: 'Test comment')
 		end
 
 		scenario 'displays photos' do
