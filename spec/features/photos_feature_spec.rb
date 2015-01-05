@@ -38,7 +38,6 @@ feature 'photos' do
 		scenario 'removes photo when deleted by a user' do
 			visit '/photos'
 			click_link 'Delete photo', match: :first
-			# expect(page).not_to have_css("img[src*='test_img.jpg']")
 			expect(page).to have_content('Photo deleted')
 		end
 	end

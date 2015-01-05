@@ -957,3 +957,888 @@ Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:04:30 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:04:30 +0000
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 20:29:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 213ms (Views: 202.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:29:52 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 20:29:53 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 66ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:30:25 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x00000104298d30 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-44526-1i9wsic>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Olay"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1qzwdw.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us20150105-44526-1lqs089'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us20150105-44526-1lqs089'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us20150105-44526-1f61xay'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1avf2us20150105-44526-1f61xay'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-2vywgt.JPG'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["comment", "Olay"], ["created_at", "2015-01-05 20:30:25.240787"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:30:25.062271"], ["updated_at", "2015-01-05 20:30:25.240787"]]
+[paperclip] saving /photos/pictures/000/000/003/original/IMG_2313.JPG
+[AWS S3 200 2.52443 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/003/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 2874ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:31:00 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x000001019f5298 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-44526-bwuzc0>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Olay"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-dig7o0.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m20150105-44526-1fax0ks'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m20150105-44526-1fax0ks'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m20150105-44526-16t1m2z'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-8b9r6m20150105-44526-16t1m2z'
+  [1m[35m (0.1ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-18v8dv7.JPG'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comment", "Olay"], ["created_at", "2015-01-05 20:31:00.367688"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:31:00.195403"], ["updated_at", "2015-01-05 20:31:00.367688"]]
+[paperclip] saving /photos/pictures/000/000/004/original/IMG_2313.JPG
+[AWS S3 200 2.109591 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/004/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 2297ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 20:31:02 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 20:31:03 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:31:10 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x00000105b4c9f8 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-44526-mvb0oi>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"olay"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-7rzjyq.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long20150105-44526-11sbweq'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long20150105-44526-11sbweq'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long20150105-44526-1l75o8m'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-u3long20150105-44526-1l75o8m'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-17y1mg6.JPG'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comment", "olay"], ["created_at", "2015-01-05 20:31:10.316682"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:31:10.140452"], ["updated_at", "2015-01-05 20:31:10.316682"]]
+[paperclip] saving /photos/pictures/000/000/005/original/IMG_2313.JPG
+[AWS S3 200 2.520176 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/005/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 2718ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 20:33:05 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 20:33:05 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 20:33:05 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 20:33:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 20:33:05 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 20:33:05 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 20:33:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:33:06 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 20:33:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:33:06 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 20:33:06 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:33:17 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x00000105948a80 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-44526-11j66lp>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"goooo"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1easwtd.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj20150105-44526-1d9vpiw'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj20150105-44526-1d9vpiw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj20150105-44526-3xs8em'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-15ljwdj20150105-44526-3xs8em'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-2itfm.JPG'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-05 20:33:17.729736"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:33:17.565464"], ["updated_at", "2015-01-05 20:33:17.729736"]]
+[paperclip] saving /photos/pictures/000/000/006/original/IMG_2313.JPG
+[AWS S3 200 2.447706 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/006/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 2619ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:34:55 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 20:34:57 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 85ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:35:04 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x000001099b1ea0 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-44526-1wjirrp>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"comment"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-70r2gt.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t20150105-44526-8y7bje'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t20150105-44526-8y7bje'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t20150105-44526-1wno813'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-1adrc4t20150105-44526-1wno813'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44526-fz0efs.JPG'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-05 20:35:04.315312"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:35:04.151447"], ["updated_at", "2015-01-05 20:35:04.315312"]]
+[paperclip] saving /photos/pictures/000/000/007/original/IMG_2313.JPG
+[AWS S3 200 2.521542 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/007/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 2694ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:36:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x0000010479e8c0 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-44709-10o5m11>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"comment"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-13zvrnw.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki20150105-44709-86gpk7'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki20150105-44709-86gpk7'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki20150105-44709-5o7h4m'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-a9kjki20150105-44709-5o7h4m'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-15wugss.JPG'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-05 20:36:08.597223"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:36:08.427397"], ["updated_at", "2015-01-05 20:36:08.597223"]]
+[paperclip] saving /photos/pictures/000/000/008/original/IMG_2313.JPG
+[AWS S3 200 2.524571 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/008/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 2875ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:36:13 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 20:36:14 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:36:19 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x0000010433e988 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-44709-b7y4cl>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"comment"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-1sqon3r.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j20150105-44709-ao2ach'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j20150105-44709-ao2ach'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j20150105-44709-1x3jazf'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-fy591j20150105-44709-1x3jazf'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-44709-lvo117.JPG'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-05 20:36:19.938446"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:36:19.772598"], ["updated_at", "2015-01-05 20:36:19.938446"]]
+[paperclip] saving /photos/pictures/000/000/009/original/IMG_2313.JPG
+[AWS S3 200 2.111033 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/009/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 2285ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 20:41:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 76ms (Views: 66.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:41:27 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 20:41:28 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:41:34 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x0000010594c608 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-45019-v2f2o7>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"comment"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-1edxjoh.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks20150105-45019-1umtd6a'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks20150105-45019-1umtd6a'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks20150105-45019-11981zh'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-4iyqks20150105-45019-11981zh'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-ruwc9l.JPG'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-05 20:41:34.950462"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:41:34.773689"], ["updated_at", "2015-01-05 20:41:34.950462"]]
+[paperclip] saving /photos/pictures/000/000/010/original/IMG_2313.JPG
+[AWS S3 200 2.45059 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/010/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 2786ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:13:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 20:42:07 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 20:42:08 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 20:42:14 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x000001092f3de8 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-45019-87rwu6>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"comment"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-pmoh5w.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r20150105-45019-13oy9i'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r20150105-45019-13oy9i'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r20150105-45019-1ouofb5'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-dvcn7r20150105-45019-1ouofb5'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45019-upcrxr.JPG'
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-05 20:42:14.756033"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 20:42:14.585079"], ["updated_at", "2015-01-05 20:42:14.756033"]]
+[paperclip] saving /photos/pictures/000/000/011/original/IMG_2313.JPG
+[AWS S3 200 2.110067 3 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/011/original/IMG_2313.JPG") SocketError getaddrinfo: nodename nor servname provided, or not known
+
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 2291ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/photos_controller.rb:12:in `create'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 77ms (Views: 66.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 21:18:58 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 21:18:59 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 66ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 21:19:04 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x00000104e25ef0 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-45182-17f6wjc>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"comment"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-rwwma6.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju20150105-45182-atg8rj'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju20150105-45182-atg8rj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju20150105-45182-qh4bul'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju20150105-45182-qh4bul'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-wcyx73.JPG'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2015-01-05 21:19:04.768648"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 21:19:04.595424"], ["updated_at", "2015-01-05 21:19:04.768648"]]
+[paperclip] saving /photos/pictures/000/000/012/original/IMG_2313.JPG
+[AWS S3 200 1.467541 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/012/original/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/012/medium/IMG_2313.JPG
+[AWS S3 200 0.55094 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>59975,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju20150105-45182-atg8rj,:key=>"photos/pictures/000/000/012/medium/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/012/thumb/IMG_2313.JPG
+[AWS S3 200 0.255609 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>26307,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150105-45182-tm9vju20150105-45182-qh4bul,:key=>"photos/pictures/000/000/012/thumb/IMG_2313.JPG")  
+
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 2624ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 21:19:07 +0000
+
+
+Started GET "/photos/12" for 127.0.0.1 at 2015-01-05 21:19:32 +0000
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered photos/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 21:22:53 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 64ms (Views: 56.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:17 +0000
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-05 21:53:30 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x00000104d1e368 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150105-45182-3anze8>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Hello world"}, "commit"=>"Create Photo"}
+Unpermitted parameters: comment
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-awv1g8.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k20150105-45182-b1951m'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k20150105-45182-b1951m'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k20150105-45182-1ruehll'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k20150105-45182-1ruehll'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150105-45182-ilf4rx.JPG'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2015-01-05 21:53:31.126235"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-05 21:53:30.941368"], ["updated_at", "2015-01-05 21:53:31.126235"]]
+[paperclip] saving /photos/pictures/000/000/013/original/IMG_2313.JPG
+[AWS S3 200 1.525163 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/013/original/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/013/medium/IMG_2313.JPG
+[AWS S3 200 0.537155 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>59975,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k20150105-45182-b1951m,:key=>"photos/pictures/000/000/013/medium/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/013/thumb/IMG_2313.JPG
+[AWS S3 200 0.253581 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>26307,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150105-45182-fi082k20150105-45182-1ruehll,:key=>"photos/pictures/000/000/013/thumb/IMG_2313.JPG")  
+
+  [1m[35m (6.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 2523ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (1.2ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 12]]
+  [1m[35mComment Exists (0.3ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 13]]
+  Rendered photos/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:33 +0000
+
+
+Started DELETE "/photos/12" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "id"=>"12"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "photos" WHERE "photos"."id" = 12
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 13]]
+  Rendered photos/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:49 +0000
+
+
+Started GET "/photos/13/comments/new" for 127.0.0.1 at 2015-01-05 21:53:51 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"photo_id"=>"13"}
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1  [["id", 13]]
+  Rendered comments/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/photos/13/comments" for 127.0.0.1 at 2015-01-05 21:53:54 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "comment"=>{"comment"=>"hello\r\n"}, "commit"=>"Post comment", "photo_id"=>"13"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Unpermitted parameters: comment
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (4.7ms)[0m  [1mINSERT INTO "comments" ("created_at", "photo_id", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2015-01-05 21:53:54.936554"], ["photo_id", 13], ["updated_at", "2015-01-05 21:53:54.936554"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 12ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-05 21:53:54 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 13]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1  [["photo_id", 13]]
+  Rendered photos/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-05 21:53:55 +0000
