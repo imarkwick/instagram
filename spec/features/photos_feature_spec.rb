@@ -12,30 +12,34 @@ feature 'photos' do
 		end
 	end
 
-
 	context 'photos have been added' do
-		scenario 'displays photos' do
+		
+		before do
 			create_photo
+		end
+
+		scenario 'displays photos' do
 			visit '/photos'
 			expect(page).to have_css("img[src*='test_img.jpg']")
 			expect(page).not_to have_content('No photos')
 		end
-	end
 
-	context 'adding photos' do
-		scenario 'prompts user to add img url and comment, then displays it' do
-			create_photo
+		scenario 'adding and displaying photos' do
 			expect(current_path).to eq '/photos'
 			expect(page).to have_css("img[src*='test_img.jpg']")
 		end
-	end
 
-	context 'viewing photos' do
 		scenario 'lets a user view a photo' do
-			create_photo
 			visit '/photos'
 			find('.photos').click
 			expect(page).to have_css("img[src*='test_img.jpg']")
+		end
+
+		scenario 'removes photo when deleted by a user' do
+			visit '/photos'
+			click_link 'Delete photo', match: :first
+			# expect(page).not_to have_css("img[src*='test_img.jpg']")
+			expect(page).to have_content('Photo deleted')
 		end
 	end
 end
