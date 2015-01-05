@@ -14,7 +14,6 @@ feature 'photos' do
 
 
 	context 'photos have been added' do
-
 		scenario 'displays photos' do
 			create_photo
 			visit '/photos'
@@ -31,13 +30,12 @@ feature 'photos' do
 		end
 	end
 
-	# context 'viewing photos' do
-
-	# 	scenario 'lets a user view a photo' do
-	# 		visit '/photos'
-	# 		click_link 'pic'
-	# 		expect(page).to have_content 'img_url'
-	# 		expect(current_path).to eq "/photos/#{pic.id}"
-	# 	end
-	# end
+	context 'viewing photos' do
+		scenario 'lets a user view a photo' do
+			create_photo
+			visit '/photos'
+			find('.photos').click
+			expect(page).to have_css("img[src*='test_img.jpg']")
+		end
+	end
 end
