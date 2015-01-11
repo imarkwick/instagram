@@ -30,11 +30,11 @@ gem 'aws-sdk'
 
 gem 'pg'
 
-# gem 'paperclip'
-
 gem 'paperclip'
 
 gem 'paperclip-rack', require: 'paperclip/rack'
+
+gem 'devise'
 
 group :test do 
 	gem 'rspec-rails'
