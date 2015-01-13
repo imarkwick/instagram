@@ -21,18 +21,21 @@ feature 'photos' do
 		scenario 'displays photos' do
 			visit '/photos'
 			expect(page).to have_css("img[src*='test_img.jpg']")
+			expect(page).to have_content('Title comment')
 			expect(page).not_to have_content('No photos')
 		end
 
 		scenario 'adding and displaying photos' do
 			expect(current_path).to eq '/photos'
 			expect(page).to have_css("img[src*='test_img.jpg']")
+			expect(page).to have_content('Title comment')
 		end
 
 		scenario 'lets a user view a photo' do
 			visit '/photos'
 			find('.photos').click
 			expect(page).to have_css("img[src*='test_img.jpg']")
+			expect(page).to have_content('Title comment')
 		end
 
 		scenario 'removes photo when deleted by a user' do

@@ -3670,3 +3670,332 @@ Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-12 11:08:04 +000
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-12 11:08:04 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 121ms (Views: 94.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 09:34:11 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-13 09:34:14 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 73ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 11:02:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 87ms (Views: 65.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 11:02:41 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 11:02:41 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 11:02:41 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 11:02:41 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-13 11:02:42 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-13 11:02:50 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x00000106f533e8 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150113-11766-khq855>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Hola"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1qgit71.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq20150113-11766-1sruf0m'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq20150113-11766-1sruf0m'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq20150113-11766-7qb6y3'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq20150113-11766-7qb6y3'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-14mb7no.JPG'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["comment", "Hola"], ["created_at", "2015-01-13 11:02:50.346686"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-13 11:02:50.175882"], ["updated_at", "2015-01-13 11:02:50.346686"]]
+[paperclip] saving /photos/pictures/000/000/023/original/IMG_2313.JPG
+[AWS S3 200 4.067017 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/023/original/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/023/medium/IMG_2313.JPG
+[AWS S3 200 1.61624 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>59975,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq20150113-11766-1sruf0m,:key=>"photos/pictures/000/000/023/medium/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/023/thumb/IMG_2313.JPG
+[AWS S3 200 0.819641 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>26307,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1j7p2wq20150113-11766-7qb6y3,:key=>"photos/pictures/000/000/023/thumb/IMG_2313.JPG")  
+
+  [1m[36m (6.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 6875ms (ActiveRecord: 7.3ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-13 11:02:57 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x0000010a4868d0 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150113-11766-17gpql5>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Hola"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1u8qbox.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o20150113-11766-1alj7aa'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o20150113-11766-1alj7aa'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o20150113-11766-14oi48k'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o20150113-11766-14oi48k'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-i7ldpa.JPG'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comment", "Hola"], ["created_at", "2015-01-13 11:02:57.237790"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-13 11:02:57.055848"], ["updated_at", "2015-01-13 11:02:57.237790"]]
+[paperclip] saving /photos/pictures/000/000/024/original/IMG_2313.JPG
+[AWS S3 200 0.250713 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/024/original/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/024/medium/IMG_2313.JPG
+[AWS S3 200 0.193929 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>59975,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o20150113-11766-1alj7aa,:key=>"photos/pictures/000/000/024/medium/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/024/thumb/IMG_2313.JPG
+[AWS S3 200 0.058747 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>26307,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-15ghm2o20150113-11766-14oi48k,:key=>"photos/pictures/000/000/024/thumb/IMG_2313.JPG")  
+
+  [1m[35m (6.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 704ms (ActiveRecord: 7.1ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-13 11:02:57 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x0000010187a1e8 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150113-11766-vlaqs>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Hola"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1cikr4r.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd20150113-11766-1mcs8gc'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd20150113-11766-1mcs8gc'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd20150113-11766-1xf3n1l'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd20150113-11766-1xf3n1l'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ovx7fy.JPG'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["comment", "Hola"], ["created_at", "2015-01-13 11:02:58.025038"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-13 11:02:57.842428"], ["updated_at", "2015-01-13 11:02:58.025038"]]
+[paperclip] saving /photos/pictures/000/000/025/original/IMG_2313.JPG
+[AWS S3 200 0.403518 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/025/original/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/025/medium/IMG_2313.JPG
+[AWS S3 200 0.138673 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>59975,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd20150113-11766-1mcs8gc,:key=>"photos/pictures/000/000/025/medium/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/025/thumb/IMG_2313.JPG
+[AWS S3 200 0.381131 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>26307,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1sevisd20150113-11766-1xf3n1l,:key=>"photos/pictures/000/000/025/thumb/IMG_2313.JPG")  
+
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 1127ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-13 11:02:58 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mComment Exists (1.0ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 23]]
+  [1m[36mComment Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 24]]
+  [1m[35mComment Exists (0.5ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 25]]
+  Rendered photos/index.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 68ms (Views: 63.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 11:02:59 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 11:02:59 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 11:02:59 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 11:02:59 +0000
+
+
+Started DELETE "/photos/23" for 127.0.0.1 at 2015-01-13 11:03:04 +0000
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "id"=>"23"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mSQL (6.4ms)[0m  DELETE FROM "photos" WHERE "photos"."id" = 23
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-13 11:03:04 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 24]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 25]]
+  Rendered photos/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:04 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:04 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:04 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:04 +0000
+
+
+Started DELETE "/photos/24" for 127.0.0.1 at 2015-01-13 11:03:05 +0000
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "id"=>"24"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "photos" WHERE "photos"."id" = 24
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-13 11:03:05 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 25]]
+  Rendered photos/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:05 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:05 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:05 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:05 +0000
+
+
+Started DELETE "/photos/25" for 127.0.0.1 at 2015-01-13 11:03:06 +0000
+Processing by PhotosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "id"=>"25"}
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1  [["id", 25]]
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "photos" WHERE "photos"."id" = 25[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-13 11:03:07 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:07 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:07 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:07 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:07 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-13 11:03:09 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-13 11:03:16 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x00000102272100 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150113-11766-1k2v03c>, @original_filename="IMG_2313.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"IMG_2313.JPG\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Hola"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-n6te6x.JPG'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n2.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n2.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n2.JPG[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n220150113-11766-1b7bimh'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n220150113-11766-1b7bimh'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n2.JPG[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n2.JPG[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n2.JPG[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n220150113-11766-rz3teg'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n220150113-11766-rz3teg'
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/26bfab617dfcdc73a4030c3c37c8b28420150113-11766-ltzhqp.JPG'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["comment", "Hola"], ["created_at", "2015-01-13 11:03:16.379486"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "IMG_2313.JPG"], ["picture_file_size", 96960], ["picture_updated_at", "2015-01-13 11:03:16.205205"], ["updated_at", "2015-01-13 11:03:16.379486"]]
+[paperclip] saving /photos/pictures/000/000/026/original/IMG_2313.JPG
+[AWS S3 200 5.884055 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>96960,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: IMG_2313.JPG,:key=>"photos/pictures/000/000/026/original/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/026/medium/IMG_2313.JPG
+[AWS S3 200 0.857775 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>59975,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n220150113-11766-1b7bimh,:key=>"photos/pictures/000/000/026/medium/IMG_2313.JPG")  
+
+[paperclip] saving /photos/pictures/000/000/026/thumb/IMG_2313.JPG
+[AWS S3 200 0.4595 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>26307,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 26bfab617dfcdc73a4030c3c37c8b28420150113-11766-1ols3n220150113-11766-rz3teg,:key=>"photos/pictures/000/000/026/thumb/IMG_2313.JPG")  
+
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 7389ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-13 11:03:23 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 26]]
+  Rendered photos/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:23 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 11:03:23 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:23 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:23 +0000

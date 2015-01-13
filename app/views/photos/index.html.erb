@@ -4,6 +4,7 @@
 	<% if @photos.any? %>
 		<% @photos.each do |photo| %>
 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+			<%=  photo.comment %>
 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
 			<h3>Comments</h3>
 			<div class="comments">
