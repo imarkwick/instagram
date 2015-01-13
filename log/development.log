@@ -3999,3 +3999,385 @@ Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:23 +000
 
 
 Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 11:03:23 +0000
+  [1m[36m (240.0ms)[0m  [1mCREATE DATABASE "instagram_development" ENCODING = 'unicode'[0m
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePhotos (20141223180158)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "photos" ("id" serial primary key, "picture" character varying(255), "comment" character varying(255), "likes" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141223180158"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddAttachmentAvatarToUsers (20141226124219)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "photos" ADD COLUMN "image_file_name" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "photos" ADD COLUMN "image_content_type" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "photos" ADD COLUMN "image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "photos" ADD COLUMN "image_updated_at" timestamp
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20141226124219"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddAttachmentPictureToPhotos (20141227005909)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "photos" ADD COLUMN "picture_file_name" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "photos" ADD COLUMN "picture_content_type" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "photos" ADD COLUMN "picture_file_size" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "photos" ADD COLUMN "picture_updated_at" timestamp[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141227005909"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddCommentToPhotos (20150105172006)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "photos" ADD COLUMN "description" text[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150105172006"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateComments (20150105202648)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "comment" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150105202648"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddPhotoIdToComments (20150105212947)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "comments" ADD COLUMN "photo_id" integer[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_comments_on_photo_id" ON "comments"  ("photo_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150105212947"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to DeviseCreateUsers (20150113135137)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (0.8ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150113135137"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 96ms (Views: 81.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:10 +0000
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-13 15:10:14 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-13 15:10:25 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk=", "user"=>{"email"=>"i@i.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'i@i.com' LIMIT 1
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-01-13 15:10:25.908116"], ["email", "i@i.com"], ["encrypted_password", "$2a$10$uJnEXSML4dcfC3pJ80Wdie5MVM8xhn05fSHBhZBeqtJB6QtqGU2/e"], ["updated_at", "2015-01-13 15:10:25.908116"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 1  [["current_sign_in_at", "2015-01-13 15:10:25.917141"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_at", "2015-01-13 15:10:25.917141"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2015-01-13 15:10:25.918212"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:10:25 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 15:10:26 +0000
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9ecHknCUmdsv1wKeGIMztBs6ZbKGleuuV6driOjsxOk="}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 67ms (Views: 60.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 15:20:45 +0000
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-13 15:20:48 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 79ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BaYzVLGrIEbu5x62hiLRI0xFQ3GfagEimDItE3eH9I0=", "user"=>{"email"=>"i@i.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'i@i.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["current_sign_in_at", "2015-01-13 15:21:28.469743"], ["sign_in_count", 2], ["updated_at", "2015-01-13 15:21:28.470853"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:28 +0000
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9M5lOyTkoa/MGY18cP7X0vGmkmXA+PMkBJZ+9uFnvq8="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 15:21:30 +0000
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-13 15:21:31 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 67ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:23:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 78ms (Views: 63.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 15:23:56 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 15:23:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 15:23:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 15:23:57 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 15:23:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 15:23:57 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 15:23:57 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 15:23:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 15:23:57 +0000
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-01-13 15:23:58 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3hFAUyMWf9kNsxZkMV2r19fyqF5gprUNIl/tONCRJbI=", "user"=>{"email"=>"m@m.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'm@m.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2015-01-13 15:24:09.464128"], ["email", "m@m.com"], ["encrypted_password", "$2a$10$I5GJ.IHLiHlLwgb2JrBMs.7oh9I6.ec3xZ5rjpK6f8upFcDYHy5JW"], ["updated_at", "2015-01-13 15:24:09.464128"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 2  [["current_sign_in_at", "2015-01-13 15:24:09.468364"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_at", "2015-01-13 15:24:09.468364"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2015-01-13 15:24:09.469395"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-13 15:24:09 +0000

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+  <link data-turbolinks-track="true" href="/assets/application.css" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/application.js"></script>
+  
+</head>
+<body>
+
+			<a href="/users/sign_in">Sign in</a>
+			<a href="/users/sign_up">Sign up</a>
+
+
+	<p class="notice"></p>
+  <p class="alert"></p>
+
+	<h2>Sign up</h2>
+
+<form accept-charset="UTF-8" action="/users" class="new_user" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+      <div id="error_explanation">
+      <h2>1 error prohibited this user from being saved:</h2>
+      <ul><li>Email has already been taken</li></ul>
+    </div>
+
+
+  <div class="field">
+    <div class="field_with_errors"><label for="user_email">Email</label></div><br />
+    <div class="field_with_errors"><input autofocus="autofocus" id="user_email" name="user[email]" type="email" value="test@example.com" /></div>
+  </div>
+
+  <div class="field">
+    <label for="user_password">Password</label>
+    <em>(8 characters minimum)</em>
+    <br />
+    <input autocomplete="off" id="user_password" name="user[password]" type="password" />
+  </div>
+
+  <div class="field">
+    <label for="user_password_confirmation">Password confirmation</label><br />
+    <input autocomplete="off" id="user_password_confirmation" name="user[password_confirmation]" type="password" />
+  </div>
+
+  <div class="actions">
+    <input name="commit" type="submit" value="Sign up" />
+  </div>
+</form>
+  <a href="/users/sign_in">Log in</a><br />
+
+
+
+
+
+
+
+
+</body>
+</html>
