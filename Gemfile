@@ -36,6 +36,10 @@ gem 'paperclip-rack', require: 'paperclip/rack'
 
 gem 'devise'
 
+gem 'omniauth-facebook'
+
+gem 'rails_12factor', 			group: :production
+
 group :test do 
 	gem 'rspec-rails'
 	gem 'capybara'

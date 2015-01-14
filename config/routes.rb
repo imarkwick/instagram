@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  # You can have the root of your site routed with "root"
   root to: 'photos#index'
+
+  resources :photos do
+    resources :comments
+  end
+
+  devise_scope :user do
+    get 'sign_out', :to => 'devise/session#destroy', :as => :destroy_user_session_path
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -15,9 +20,6 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :photos do
-    resources :comments
-  end
 
   # Example resource route with options:
   #   resources :products do
