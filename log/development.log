@@ -5183,3 +5183,346 @@ Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-14 14:36:40 +000
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-14 14:36:40 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  Rendered photos/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 154ms (Views: 138.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:08 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-14 15:43:12 +0000
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-14 15:43:22 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B/GbqPbVVM4S7aYIT2+4gnhQrojYYzLfr0LJ1KXZAPM=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x000001069fd718 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150114-25054-1ahwhuy>, @original_filename="test_img copy.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"test_img copy.jpg\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"Hello world"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/f8a986813c439c855b10aa3d513ddcba20150114-25054-aesjb6.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg.jpg[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg.jpg[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg20150114-25054-18hlo8l'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg20150114-25054-18hlo8l'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg.jpg[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg.jpg[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg20150114-25054-1j6l1sy'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg20150114-25054-1j6l1sy'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/f8a986813c439c855b10aa3d513ddcba20150114-25054-1o0k1h5.jpg'
+  [1m[36mSQL (10.1ms)[0m  [1mINSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comment", "Hello world"], ["created_at", "2015-01-14 15:43:22.638549"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "test_img_copy.jpg"], ["picture_file_size", 131451], ["picture_updated_at", "2015-01-14 15:43:22.417895"], ["updated_at", "2015-01-14 15:43:22.638549"]]
+[paperclip] saving /photos/pictures/000/000/001/original/test_img_copy.jpg
+[AWS S3 200 0.352266 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>131451,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: test_img copy.jpg,:key=>"photos/pictures/000/000/001/original/test_img_copy.jpg")  
+
+[paperclip] saving /photos/pictures/000/000/001/medium/test_img_copy.jpg
+[AWS S3 200 0.067556 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>60866,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg20150114-25054-18hlo8l,:key=>"photos/pictures/000/000/001/medium/test_img_copy.jpg")  
+
+[paperclip] saving /photos/pictures/000/000/001/thumb/test_img_copy.jpg
+[AWS S3 200 0.081623 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>15862,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: aea3139929610850354bb35d21564f2f20150114-25054-1ckbgqg20150114-25054-1j6l1sy,:key=>"photos/pictures/000/000/001/thumb/test_img_copy.jpg")  
+
+  [1m[35m (72.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 1089ms (ActiveRecord: 82.8ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (13.2ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 1]]
+  Rendered photos/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 75ms (Views: 59.1ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-14 15:43:23 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-14 15:44:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#new as HTML
+  Rendered photos/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 129ms (Views: 113.5ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2015-01-14 15:44:32 +0000
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B/GbqPbVVM4S7aYIT2+4gnhQrojYYzLfr0LJ1KXZAPM=", "photo"=>{"picture"=>#<ActionDispatch::Http::UploadedFile:0x000001039d8740 @tempfile=#<Tempfile:/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/RackMultipart20150114-25099-1a7tfgi>, @original_filename="test_img copy.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[picture]\"; filename=\"test_img copy.jpg\"\r\nContent-Type: image/jpeg\r\n">, "comment"=>"New world"}, "commit"=>"Create Photo"}
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/f8a986813c439c855b10aa3d513ddcba20150114-25099-13vd9w0.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny.jpg[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny.jpg[0]' -auto-orient -resize "400x400" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny20150114-25099-1migsme'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny20150114-25099-1migsme'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny.jpg[0]'
+Command :: convert '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny.jpg[0]' -auto-orient -resize "200x200" '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny20150114-25099-qmfzuh'
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny20150114-25099-qmfzuh'
+  [1m[35m (0.3ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/__/yw482c891ksfvn2brtb5c19m0000gn/T/f8a986813c439c855b10aa3d513ddcba20150114-25099-cfxyx5.jpg'
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "photos" ("comment", "created_at", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comment", "New world"], ["created_at", "2015-01-14 15:44:32.929738"], ["picture_content_type", "image/jpeg"], ["picture_file_name", "test_img_copy.jpg"], ["picture_file_size", 131451], ["picture_updated_at", "2015-01-14 15:44:32.752208"], ["updated_at", "2015-01-14 15:44:32.929738"]]
+[paperclip] saving /photos/pictures/000/000/002/original/test_img_copy.jpg
+[AWS S3 200 0.423154 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>131451,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: test_img copy.jpg,:key=>"photos/pictures/000/000/002/original/test_img_copy.jpg")  
+
+[paperclip] saving /photos/pictures/000/000/002/medium/test_img_copy.jpg
+[AWS S3 200 0.081142 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>60866,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny20150114-25099-1migsme,:key=>"photos/pictures/000/000/002/medium/test_img_copy.jpg")  
+
+[paperclip] saving /photos/pictures/000/000/002/thumb/test_img_copy.jpg
+[AWS S3 200 0.056769 0 retries] put_object(:acl=>:public_read,:bucket_name=>"izinstagram",:content_length=>15862,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: aea3139929610850354bb35d21564f2f20150114-25099-1h2jtny20150114-25099-qmfzuh,:key=>"photos/pictures/000/000/002/thumb/test_img_copy.jpg")  
+
+  [1m[35m (6.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 888ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 1]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 2]]
+  Rendered photos/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 58ms (Views: 55.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:33 +0000
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+Processing by PhotosController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mComment Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 1]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 2]]
+  Rendered photos/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-14 15:44:58 +0000
+
+
+Started GET "/photos/1/comments/new" for 127.0.0.1 at 2015-01-14 15:45:27 +0000
+Processing by CommentsController#new as HTML
+  Parameters: {"photo_id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered comments/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/photos/1/comments" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B/GbqPbVVM4S7aYIT2+4gnhQrojYYzLfr0LJ1KXZAPM=", "comment"=>{"comment"=>"Nice world"}, "commit"=>"Post comment", "photo_id"=>"1"}
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT  "photos".* FROM "photos"  WHERE "photos"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (15.0ms)[0m  INSERT INTO "comments" ("comment", "created_at", "photo_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["comment", "Nice world"], ["created_at", "2015-01-14 15:45:32.442079"], ["photo_id", 1], ["updated_at", "2015-01-14 15:45:32.442079"]]
+  [1m[36m (6.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 32ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mComment Exists (0.3ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 2]]
+  Rendered photos/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-14 15:45:32 +0000
+
+
+Started GET "/photos" for 127.0.0.1 at 2015-01-14 15:46:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mComment Exists (0.3ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[35mComment Exists (0.4ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 2]]
+  Rendered photos/index.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 158ms (Views: 140.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-14 15:47:00 +0000
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-14 15:47:03 +0000
+Processing by PhotosController#new as HTML
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-14 15:47:03 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 62ms (Views: 52.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2015-01-14 15:49:29 +0000
+Processing by PhotosController#new as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-01-14 15:49:29 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)

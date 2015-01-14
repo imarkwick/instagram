@@ -6,6 +6,7 @@ include ApplicationHelper
 feature 'commenting' do 
 
 	before do
+		sign_up
 		create_photo
 	end
 	

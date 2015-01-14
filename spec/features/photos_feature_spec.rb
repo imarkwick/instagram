@@ -15,6 +15,7 @@ feature 'photos' do
 	context 'photos have been added' do
 		
 		before do
+			sign_up
 			create_photo
 		end
 

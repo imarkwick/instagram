@@ -14,6 +14,12 @@ context 'user not signed in and on the homepage' do
 		visit '/'
 		expect(page).not_to have_link('Sign out')
 	end
+
+	it 'should not be able to add a photo' do
+		visit '/'
+		click_link 'Add photo'
+		expect(page).to have_content('You need to sign in or sign up before continuing')
+	end
 end
 
 context 'user signed in on the homepage' do

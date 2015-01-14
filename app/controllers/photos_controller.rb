@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
 
+	before_action :authenticate_user!, :except => [:index, :show]
+
 	def index
 		@photos = Photo.all
 	end
@@ -10,11 +12,11 @@ class PhotosController < ApplicationController
 
 	def create
 		@photo = Photo.new(photo_params)
-		@photo.save
-		redirect_to '/photos'
-		# else
-		#   render '/photos/new'
-		# end
+		if @photo.save
+			redirect_to '/photos'
+		else
+			render '/photos/new'
+		end
 	end
 
 	def photo_params
