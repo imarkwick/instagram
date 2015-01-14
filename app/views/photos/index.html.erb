@@ -20,7 +20,9 @@
 					<p>No comments</p>
 				<% end %>
 			</div>
-			<%= link_to "Delete photo", photo_path(photo), method: :delete %>
+			<% if @user_id == photo.user_id %>
+				<%= link_to "Delete photo", photo_path(photo), method: :delete %>
+			<% end %>
 			<br>
 		<% end %>
 	<% else %>
