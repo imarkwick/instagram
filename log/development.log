@@ -7567,3 +7567,49 @@ Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1  [["photo_id", 4]]
+  [1m[36mComment Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 4]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1  [["photo_id", 5]]
+  [1m[36mComment Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 5]]
+  Rendered photos/index.html.erb within layouts/application (46.4ms)
+Completed 200 OK in 128ms (Views: 102.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 13:45:25 +0000
