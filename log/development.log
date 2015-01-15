@@ -6879,3 +6879,691 @@ Migrating to RemoveLikesFromPhotos (20150115124028)
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 12:56:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+     5: 		<% @photos.each do |photo| %>
+     6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+     7: 
+     8: 			<%= photo.likes.count %>
+     9: 			
+    10: 			<%=  photo.comment %>
+    11: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+  app/views/photos/index.html.erb:8:in `block in _app_views_photos_index_html_erb__3393871222389279726_2168707860'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb__3393871222389279726_2168707860'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:03:34 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (25.6ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+     5: 		<% @photos.each do |photo| %>
+     6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+     7: 
+     8: 			<%= photo.likes.count %>
+     9: 
+    10: 			<%=  photo.comment %>
+    11: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+  app/views/photos/index.html.erb:8:in `block in _app_views_photos_index_html_erb___3334785751831899724_2181826520'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___3334785751831899724_2181826520'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLikesToPhotos (20150115130633)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "photos" ADD COLUMN "like" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150115130633"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:11:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (28.3ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+     5: 		<% @photos.each do |photo| %>
+     6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+     7: 
+     8: 			<%= photo.likes.count %>
+     9: 
+    10: 			<%=  photo.comment %>
+    11: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+  app/views/photos/index.html.erb:8:in `block in _app_views_photos_index_html_erb___4448056662478170231_2158727340'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___4448056662478170231_2158727340'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:12:41 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `count' for nil:NilClass):
+     5: 		<% @photos.each do |photo| %>
+     6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+     7: 
+     8: 			<%= photo.like.count %>
+     9: 
+    10: 			<%=  photo.comment %>
+    11: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+  app/views/photos/index.html.erb:8:in `block in _app_views_photos_index_html_erb___4448056662478170231_2219575620'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___4448056662478170231_2219575620'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:12:52 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+     5: 		<% @photos.each do |photo| %>
+     6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+     7: 
+     8: 			<%= photo.likes.count %>
+     9: 
+    10: 			<%=  photo.comment %>
+    11: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+  app/views/photos/index.html.erb:8:in `block in _app_views_photos_index_html_erb___4448056662478170231_2160426600'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___4448056662478170231_2160426600'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:18:41 +0000
+Processing by PhotosController#index as HTML
+  Rendered photos/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/Users/izzymarkwick/makers_code/rails/instagram/app/views/photos/index.html.erb:9: syntax error, unexpected keyword_end
+			'.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+			                                    ^
+/Users/izzymarkwick/makers_code/rails/instagram/app/views/photos/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;		 end 
+         		    ^
+/Users/izzymarkwick/makers_code/rails/instagram/app/views/photos/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	    ^
+/Users/izzymarkwick/makers_code/rails/instagram/app/views/photos/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/izzymarkwick/makers_code/rails/instagram/app/views/photos/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/photos/index.html.erb:9: syntax error, unexpected keyword_end
+  app/views/photos/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+  app/views/photos/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+  app/views/photos/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/photos/index.html.erb:37: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:18:53 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<% if photo.likes.any? %>
+    8: 			<p><%= photo.likes.count %></p>
+    9: 			<% end %>
+   10: 			<%=  photo.comment %>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb___4448056662478170231_2220001640'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___4448056662478170231_2220001640'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:20:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (25.1ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<% if photo.likes.any? %>
+    8: 			<p><%= photo.likes.count %></p>
+    9: 			<% end %>
+   10: 			<%=  photo.comment %>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb___3695026816531530428_2177747840'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___3695026816531530428_2177747840'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:21:02 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<p><%= photo.likes.count %></p>
+    8: 			<%=  photo.comment %>
+    9: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+   10: 			<h3>Comments</h3>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb___3695026816531530428_2160333380'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___3695026816531530428_2160333380'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:21:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (27.3ms)
+Completed 500 Internal Server Error in 52ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<p><%= photo.likes.count %></p>
+    8: 			<%=  photo.comment %>
+    9: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+   10: 			<h3>Comments</h3>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb___3905819405235509685_2181797200'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___3905819405235509685_2181797200'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:21:45 +0000
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `count' for nil:NilClass):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<p><%= photo.like.count %></p>
+    8: 			<%=  photo.comment %>
+    9: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+   10: 			<h3>Comments</h3>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb___3905819405235509685_2160947400'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___3905819405235509685_2160947400'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (7.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:29:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 47ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<p><%= photo.likes.count %></p>
+    8: 			<%=  photo.comment %>
+    9: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+   10: 			<h3>Comments</h3>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb___158022532773975650_2173943680'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___158022532773975650_2173943680'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (8.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddingLikesToPhotos (20150115133134)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150115133134"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:31:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+  Rendered photos/index.html.erb within layouts/application (26.3ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "likes" does not exist
+LINE 5:                WHERE a.attrelid = '"likes"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"likes"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<p><%= photo.likes.count %></p>
+    8: 			<%=  photo.comment %>
+    9: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+   10: 			<h3>Comments</h3>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb__2350998879491674776_2177763720'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb__2350998879491674776_2177763720'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLikes (20150115133455)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "likes" ("id" serial primary key, "likes" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150115133455"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:36:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedColumn: ERROR:  column likes.photo_id does not exist
+LINE 1: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1
+                                            ^
+: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1
+  Rendered photos/index.html.erb within layouts/application (40.6ms)
+Completed 500 Internal Server Error in 62ms
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column likes.photo_id does not exist
+LINE 1: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1
+                                            ^
+: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<p><%= photo.likes.count %></p>
+    8: 			<%=  photo.comment %>
+    9: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+   10: 			<h3>Comments</h3>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb__893966093081571358_2161628180'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb__893966093081571358_2161628180'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveLikeFromPhotos (20150115133951)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "photos" DROP "like"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150115133951"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:40:20 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+PG::UndefinedColumn: ERROR:  column likes.photo_id does not exist
+LINE 1: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1
+                                            ^
+: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1
+  Rendered photos/index.html.erb within layouts/application (28.1ms)
+Completed 500 Internal Server Error in 51ms
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column likes.photo_id does not exist
+LINE 1: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1
+                                            ^
+: SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1):
+    4: 	<% if @photos.any? %>
+    5: 		<% @photos.each do |photo| %>
+    6: 			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+    7: 			<p><%= photo.likes.count %></p>
+    8: 			<%=  photo.comment %>
+    9: 			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+   10: 			<h3>Comments</h3>
+  app/views/photos/index.html.erb:7:in `block in _app_views_photos_index_html_erb___204849226166767809_2181907440'
+  app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb___204849226166767809_2181907440'
+
+
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/izzymarkwick/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (9.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhotoIdToLikes (20150115134311)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "likes" ADD COLUMN "photo_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150115134311"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-15 13:43:28 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "photos"
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1  [["photo_id", 4]]
+  [1m[36mComment Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1  [["photo_id", 5]]
+  [1m[36mComment Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1[0m  [["photo_id", 5]]
+  Rendered photos/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 374ms (Views: 350.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:28 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-15 13:43:28 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-15 13:43:29 +0000
