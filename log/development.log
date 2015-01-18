@@ -9190,3 +9190,522 @@ Processing by LikesController#create as */*
   [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1  [["photo_id", 4]]
 Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (13.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.3ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 243ms (Views: 185.1ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:09:06 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:12 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:12 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:12 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:09:12 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.4ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:10:04 +0000
+
+
+Started GET "/assets/background/BandWPhotos.jpg" for 127.0.0.1 at 2015-01-18 14:10:05 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 90ms (Views: 86.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:49 +0000
+
+
+Started GET "/assets/background/BandWPhotos.jpg" for 127.0.0.1 at 2015-01-18 14:11:50 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:11:56 +0000
+
+
+Started GET "/assets/background/BandWPhotos.jpg" for 127.0.0.1 at 2015-01-18 14:11:57 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 63ms (Views: 58.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:12:02 +0000
+
+
+Started GET "/assets/background/BandWPhotos.jpg" for 127.0.0.1 at 2015-01-18 14:12:03 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:15:53 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:15:53 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:15:54 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:21 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.4ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 147ms (Views: 112.8ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:36 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 65ms (Views: 60.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:48 +0000
+
+
+Started GET "/" for 127.0.0.1 at 2015-01-18 14:16:49 +0000
+Processing by PhotosController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "photos"[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "likes"  WHERE "likes"."photo_id" = $1[0m  [["photo_id", 15]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments"  WHERE "comments"."photo_id" = $1 LIMIT 1  [["photo_id", 15]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."photo_id" = $1[0m  [["photo_id", 15]]
+  Rendered photos/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/likes.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/likes.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-18 14:16:50 +0000
+
+
+Started GET "/assets/background/BandWPhotos.jpg" for 127.0.0.1 at 2015-01-18 14:17:09 +0000
