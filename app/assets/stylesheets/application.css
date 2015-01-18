@@ -19,11 +19,16 @@
 	opacity: 4;
 }*/
 
+homelink {
+	margin-left: 1%;
+	margin: 1%;
+}
+
 .background {
 	width: 100%;
 	height: 90%;
 	background-image: url(background/BandWPhotos.jpg);
-	opacity: 0;
+	opacity: 0.5;
 }
 
 #photo_picture {
@@ -36,13 +41,33 @@
 }
 
 #add_photo {
-	margin-left: 20px;
+	margin-left: 3%;
 	padding: 6px;
 	border: solid blue 1px;
+	background-color: white;
+	text-decoration: none;
 }
 
 .photos {
 	padding: 20px;
+	margin-left: 36%;
+	width: 40%;
+	height: 40%;
+}
+
+img {
+	width: 80%;
+	position: relative;
+	margin-bottom: 2%;
+	margin-top: 5%;
+}
+
+.post {
+	background-color: white;
+}
+
+.post_content {
+	margin-left: 18%;
 }
 
 #show {

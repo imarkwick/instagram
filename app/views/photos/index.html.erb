@@ -2,35 +2,39 @@
 <a href='<%= new_photo_path %>' id='add_photo'>Add photo</a>
 <section class="photos">
 	<% if @photos.any? %>
-		<% @photos.each do |photo| %>
-			<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
-			<br>
-			<%=  photo.comment %>
-			<br>
+		<div class="post">
+			<div class="post_content">
+			<% @photos.each do |photo| %>
+				<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
+				<br>
+				<%=  photo.comment %>
+				<br>
 
-			<span class="likes_count"> <%= photo.likes.count %></span> Likes
-			<br>
-			<%= link_to "Like", photo_likes_path(photo), class: 'likes-link' %>
+				<span class="likes_count"> <%= photo.likes.count %></span> Likes
+				<br>
+				<%= link_to "Like", photo_likes_path(photo), class: 'likes-link' %>
 
-			<%= link_to "Leave comment", new_photo_comment_path(photo) %>
-			<h3>Comments</h3>
-			<div class="comments">
-				<% if photo.comments.any? %>
-					<ul>
-						<% photo.comments.each do |comment| %>
-							<li>
-								<%= comment.comment %> 
-							</li>
-						<% end %>
-					</ul>
-				<% else %>
-					<p>No comments</p>
-				<% end %>
-			</div>
+				<%= link_to "Leave comment", new_photo_comment_path(photo) %>
+				<h3>Comments</h3>
+				<div class="comments">
+					<% if photo.comments.any? %>
+						<ul>
+							<% photo.comments.each do |comment| %>
+								<li>
+									<%= comment.comment %> 
+								</li>
+							<% end %>
+						</ul>
+					<% else %>
+						<p>No comments</p>
+					<% end %>
+				</div>
 			<% if @user_id == photo.user_id %>
-				<%= link_to "Delete photo", photo_path(photo), method: :delete %>
+					<%= link_to "Delete photo", photo_path(photo), method: :delete %>
 			<% end %>
-			<br>
+				<br>
+			</div>
+		</div>
 		<% end %>
 	<% else %>
 		<h1>No photos</h1>
