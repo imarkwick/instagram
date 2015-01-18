@@ -2,9 +2,10 @@
 <a href='<%= new_photo_path %>' id='add_photo'>Add photo</a>
 <section class="photos">
 	<% if @photos.any? %>
+	
+			<% @photos.each do |photo| %>
 		<div class="post">
 			<div class="post_content">
-			<% @photos.each do |photo| %>
 				<%= link_to(image_tag(photo.picture.url(:thumb)), photo_path(photo)) %>
 				<br>
 				<%=  photo.comment %>
