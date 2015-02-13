@@ -14,10 +14,7 @@
  *= require_self
  */
 
-/*body {
-	background-image: url(background/BandWPhotos.jpg);
-	opacity: 4;
-}*/
+/* HOME PAGE */
 
 body {
 	max-width: 99%;
@@ -102,4 +99,10 @@ li > a {
 
 #show {
 	margin: 10%;
+}
+
+/* DEVISE FORMS */
+
+.log_in {
+	margin-left: 10px;
 }

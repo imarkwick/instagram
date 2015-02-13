@@ -1,19 +1,39 @@
 # Instagram
 
-After being introduced to Rails applications in the yelp-clone challenge, this weekend challenge was to build a clone of Instagram.
+After being introduced to Rails applications in the yelp-clone challenge, this weekend challenge at Makers Academy was to build a clone of Instagram.
 
-It requires users who can post pictures, comment on pictures, and like pictures. 
+## Objective:
 
-The app was also an introduction to Amazon Web Services and the paperclip gem, which enable it to upload and store images. 
+* Users can post pictures, comment on pictures, and like pictures. 
+* Use Amazon Web Services and the paperclip gem to upload and store images. 
+* Users must be able to create an account or sign up with their Facebook details.
 
-To view tests run;
+## Technologies used:
+
+* Ruby
+* Rails
+* HTML5
+* CSS3
+* Paperclip
+* AWS S3
+* Devise
+* RSpec
+* Capybara
+* Omniauth Facebook
+
+## How to run tests:
 
 ```sh
+$ git clone https://github.com/imarkwick/instagram.git
+$ cd instagram
 $ rspec
 ```
 
-To open in the browser, start the server and visit localhost/3000
+## How to run the server:
 
 ```sh
+$ git clone https://github.com/imarkwick/instagram.git
+$ cd instagram
+$ bundle install
 $ bin/rails s
 ```
